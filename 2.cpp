@@ -3,7 +3,7 @@
 #include <io.h>
 #include <math.h>  
 #include <time.h>
-//*³õÊ¼»¯Á´±í
+//*åˆå§‹åŒ–é“¾è¡¨
 #define MAXSIZE 20
 typedef int ElemType;
 typedef struct {
@@ -11,7 +11,7 @@ typedef struct {
 	int length;
 
 }SqList;
-//*»ñµÃÔªËØ
+//*èŽ·å¾—å…ƒç´ 
 #define OK 1;
 #define ERROR 0;
 #define TRUE 1;
@@ -25,7 +25,7 @@ Status GetElem(SqList L, int i, ElemType *e)
 		return OK
 
 }
-//*²åÈë
+//*æ’å…¥
 Status ListInsert(SqList *L, int i, ElemType e)
 {
 	int k;
@@ -42,7 +42,7 @@ Status ListInsert(SqList *L, int i, ElemType e)
 	L->length++;
 	return OK;
 }
-//*É¾³ý
+//*åˆ é™¤
 Status ListDelete(SqList *L, int i, ElemType *e)
 {
 	int k;
