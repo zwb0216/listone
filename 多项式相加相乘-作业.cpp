@@ -1,5 +1,6 @@
 /*问题描述：有两个指数递减的一元多项式，写一程序先求这两个多项式的和，再求它们的积。
-基本要求：用带表头结点的单链表作为多项式的存储表示；要建立两个单链表；多项式相加就是要把一个单链表中的结点插入到另一个单链表中去，要注意插入、删除操作中指针的正确修改。*/
+基本要求：用带表头结点的单链表作为多项式的存储表示；要建立两个单链表；
+多项式相加就是要把一个单链表中的结点插入到另一个单链表中去，要注意插入、删除操作中指针的正确修改。*/
 #include <iostream>
 using namespace std;
 
@@ -183,7 +184,7 @@ Poly * mulPoly(Polynomial &Pa, Polynomial &Pb)//A与B相乘
 
 void main()
 {
-	Polynomial Pa, Pb, Pd,Pc;//定义三个多项式类型的变量
+	Polynomial Pa, Pb, Pc, Pd;//定义四个多项式类型的变量
 	int a, b;//a,b为两个多项式的整体的项数
 	cout << "请输入第一个一元多项式的项数:";
 	cin >> a;
@@ -196,12 +197,12 @@ void main()
 	cout << "请输入一元" << b << "项式(先输入系数，再输入指数):";
 	creatPoly(Pb, b);
 
+	Pc = addPoly(Pa, Pb);
+	cout << "相加得到的多项式:";
+	outputPoly(Pc);
+
 	Pd = mulPoly(Pa, Pb);
 	cout << "相乘得到的多项式:";
 	outputPoly(Pd);
-
-	Pc = addPoly(Pa, Pb);
-	cout << "相加得到的多项式:";
-	outputPoly(Pc);1
 
 }
