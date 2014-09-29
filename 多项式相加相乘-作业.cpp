@@ -184,7 +184,7 @@ Poly * mulPoly(Polynomial &Pa, Polynomial &Pb)//A与B相乘
 
 void main()
 {
-	Polynomial Pa, Pb, Pc, Pd;//定义四个多项式类型的变量
+	Polynomial Pa, Pb, Pc, Pd, Pe ,Pf;//定义四个多项式类型的变量
 	int a, b;//a,b为两个多项式的整体的项数
 	cout << "请输入第一个一元多项式的项数:";
 	cin >> a;
@@ -201,7 +201,9 @@ void main()
 	cout << "相加得到的多项式:";
 	outputPoly(Pc);
 
-	Pd = mulPoly(Pa, Pb);
+	creatPoly(Pe, a);
+	creatPoly(Pf, b);
+	Pd = mulPoly(Pe, Pf);
 	cout << "相乘得到的多项式:";
 	outputPoly(Pd);
 
